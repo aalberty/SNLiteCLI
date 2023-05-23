@@ -1,3 +1,2 @@
-# ignore all node modules
-/node_modules/
 config.json
+scratchpad.py
