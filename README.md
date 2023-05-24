@@ -7,6 +7,8 @@ More responsive and time efficient experience for navigating records on platform
 	- Ex: List of mid servers combined from all three instances
 	- "sudo" requirement to perform Create, Update, and Delete operations on prod records. Single command, or sudo session
 - threading to prevent freeze while a command is running
+- Ability to run a script on platform and retrieve results
+	- Script library
 
 
 CLI commands
