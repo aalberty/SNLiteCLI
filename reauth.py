@@ -8,7 +8,6 @@ config = json.loads(file.read())
 file.close()
 
 res = refresh_token(config)
-print(res.text)
 now = datetime.now()
 if res.status_code == 200:
     config['access_token'] = json.loads(res.text)['access_token']
