@@ -1,5 +1,6 @@
 SNLite
 
+Can this leverage the SN CLI tool so low-level doesn't need to be written by me?
 
 More responsive and time efficient experience for navigating records on platform
 - schema view with sample record values
