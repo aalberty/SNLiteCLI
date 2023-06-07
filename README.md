@@ -29,6 +29,8 @@ Response:
 
 
 
+## Thoughts/Ideas  
+
 Can this leverage the SN CLI tool so low-level doesn't need to be written by me?
 
 More responsive and time efficient experience for navigating records on platform
