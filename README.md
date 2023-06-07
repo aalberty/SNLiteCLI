@@ -1,4 +1,33 @@
-SNLite
+# SNLite
+
+## pseudo-code
+Session:  
+- AuthTimeout: datetime  
+- History: Arr[Command]  
+- SessionVars: Arr[Var]  
+  
+Command:  
+- GUID: Str  
+- Name: Str  
+- Description: Str  
+- Aliases: Arr[Str]  
+- Args: Arr[(Str:Name, Str:Description)]  
+- Response: Response  
+
+Variable:  
+- Type: Choice[Record, List]  
+- Table: Str  
+- Id(s): Arr[Str]  
+
+Response:  
+- ProcessingTime: Time
+- Trigger: Command
+- Success: Bool  
+- ErrorMessage: Str  
+- Content: Str
+
+
+
 
 Can this leverage the SN CLI tool so low-level doesn't need to be written by me?
 
