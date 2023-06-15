@@ -34,3 +34,16 @@ def calc_new_expiry(response_time, expires_in):
     fstr = "%Y-%m-%d %H:%M:%S"
     expiry = response_time + timedelta(seconds=expires_in)
     return expiry.strftime(fstr)
+
+def refresh_access():
+    file = open('config.json', 'r')
+    config = json.loads(file.read())
+    file.close()
+    res = refresh_token(config)
+    now = datetime.now()
+    if res.status_code == 200:
+        config['access_token'] = json.loads(res.text)['access_token']
+        config['expires'] = calc_new_expiry(now, json.loads(res.text)['expires_in'])
+        update_config(config, 'config.json')
+    else:
+        print ("Error refreshing token: " + res.error_message)

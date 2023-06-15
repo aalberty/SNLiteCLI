@@ -1,4 +1,4 @@
-from .api import Api
+from api import Api
 
 class Table(Api):
     def __init__(self, table, config):
